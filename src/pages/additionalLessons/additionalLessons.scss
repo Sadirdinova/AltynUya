@@ -1,0 +1,55 @@
+.additionalLessons {
+    display: grid;
+    
+
+    .content {
+        
+        h4 {
+            font-size: 24px;
+        }
+
+    }
+    table {
+        border: 1px solid #000;
+        
+        thead {
+            tr {
+                th {
+                    border: 1px solid #000;
+                    font-size: 18px;
+                    padding: 10px;
+
+                    @media screen and (max-width: 1200px) {
+                        padding: 5px;
+                        font-size: 16px;
+                    }
+
+                    @media screen and (max-width: 920px) {
+                        display: block;
+                        font-size: 20px;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        tbody {
+            tr {
+                td {
+                    border: 1px solid #000;
+                    font-size: 18px;
+                    text-align: center;
+
+                    @media screen and (max-width: 1200px) {
+                        font-size: 16px;
+                    }
+
+                    @media screen and (max-width: 920px) {
+                        display: block;
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

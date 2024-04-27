@@ -1,0 +1,15 @@
+.loader {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+
+    img {
+        width: 100px;
+        animation: flipX 2s linear infinite;
+    }
+
+    @keyframes flipX {
+        0%   {transform: perspective(150px) rotateX(  0deg)}
+        100% {transform: perspective(150px) rotateX(360deg)}
+      }
+    }

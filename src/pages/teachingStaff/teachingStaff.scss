@@ -1,0 +1,73 @@
+.teachingStaff {
+    display: grid;
+    justify-items: center;
+    gap: 30px;
+    padding: 60px 30px;
+
+    @media screen and (max-width: 500px) {
+        padding: 30px 20px;
+    }
+
+    h3 {
+        font-size: 36px;
+        color: #0b4596;
+
+        @media screen and (max-width: 500px) {
+            font-size: 28px;
+        }
+    }
+
+    hr {
+        width: 100%;
+        height: 1px;
+        background: #0b4596;
+        border: none;
+    }
+
+    .content {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        max-width: 1400px;
+        justify-content: center;
+
+        @media screen and (max-width: 500px) {
+            justify-content: center;
+        }
+
+        .items {
+            display: grid;
+            gap: 10px;
+            background-color: #dfe1f0;
+            border-radius: 15px;
+            padding: 20px;
+            max-width: 300px;
+
+            @media screen and (max-width: 500px) {
+                flex-direction: column;
+            }
+
+            .img {
+                img {
+                    width: 100%;
+                }
+            }
+
+            .text {
+
+                b {
+                    font-size: 24px;
+
+                    @media screen and (max-width: 500px) {
+                        font-size: 20px;
+                    }
+                }
+
+                p {
+                    font-size: 12px;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,69 @@
+.reseptionPage {
+    display: grid;
+    gap: 30px;
+    padding: 60px 30px;
+
+    @media screen and (max-width: 500px) {
+        padding: 30px 20px;
+    }
+
+    h3 {
+        font-size: 36px;
+        color: #3afb44;
+
+        @media screen and (max-width: 800px) {
+            font-size: 28px;
+        }
+    }
+
+    .content {
+        display: grid;
+        gap: 20px;
+        padding: 0 100px;
+
+        @media screen and (max-width: 860px) {
+            padding: 0 30px;
+        }
+
+        @media screen and (max-width: 500px) {
+            padding: 0;
+        }
+
+        b {
+            font-size: 24px;
+
+            @media screen and (max-width: 800px) {
+                font-size: 20px;
+            }
+        }
+
+        p {
+            font-size: 22px;
+            line-height: 28px;
+            opacity: 0.9;
+
+            @media screen and (max-width: 800px) {
+                font-size: 18px;
+                line-height: 24px;
+            }
+        }
+
+        ul,
+        ol {
+            display: grid;
+            gap: 5px;
+            padding: 0 30px;
+
+            li {
+                font-size: 22px;
+                line-height: 28px;
+                opacity: 0.9;
+
+                @media screen and (max-width: 800px) {
+                    font-size: 18px;
+                    line-height: 24px;
+                }
+            }
+        }
+    }
+}
