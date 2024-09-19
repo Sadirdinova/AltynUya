@@ -5,4 +5,50 @@
     h3 {
         color: #0b4596;
     }
+
+    input {
+        opacity: 0;
+        height: 0;
+        width: 0;
+        line-height: 0;
+        overflow: hidden;
+        padding: 0;
+        margin: 0;
+    }
+
+    .btn {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+
+        button {
+            background: #0b4596;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    }
+
+    .docs {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+
+        a {
+            font-size: 18px;
+        }
+
+        button {
+            background-color: red;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    }
 }

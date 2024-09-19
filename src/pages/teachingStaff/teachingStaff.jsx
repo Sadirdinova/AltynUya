@@ -34,7 +34,7 @@ function TeachingStaff({ data }) {
                         </div>
                         <div className='text'>
                             <b>{items.name} {items.surname}</b>
-                            <p>{getLocal === 'kg' ? items.job_title_ky : items.job_title_ru}</p>
+                            <p>{getLocal === 'ky' ? items.job_title_ky : items.job_title_ru}</p>
                         </div>
                     </div>
                 )) : <Loader />}

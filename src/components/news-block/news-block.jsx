@@ -21,7 +21,7 @@ function NewsBlock({ item, key }) {
         <NavLink to={`/newsPage/${item.id}`}>
           <img src={item.image} alt="image" />
           <div>
-            <p>{getLocal === 'kg' ? item.title_ky : item.title_ru}</p>
+            <p>{getLocal === 'ky' ? item.title_ky : item.title_ru}</p>
             <hr />
             <span>{formatDate(item.created_date)}</span>
           </div>

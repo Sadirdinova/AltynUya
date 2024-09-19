@@ -30,11 +30,11 @@ function Events({ data }) {
             <hr />
             {datas ? datas.map(item => (
                 <div className='content' key={item._id}>
-                    <h4>{getLocal === 'kg' ? item.title_ky : item.title_ru}</h4>
+                    <h4>{getLocal === 'ky' ? item.title_ky : item.title_ru}</h4>
                     <div>
                         <img src={item.image} alt="" />
                     </div>
-                    <p>{getLocal === 'kg' ? item.text_ky : item.text_ru}</p>
+                    <p>{getLocal === 'ky' ? item.text_ky : item.text_ru}</p>
                     <hr />
                     <span>{item.created_date}</span>
                 </div>

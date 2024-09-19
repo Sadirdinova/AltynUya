@@ -24,10 +24,14 @@ export const { setNews, setNewsAll } = newsSlice.actions
 
 
 
-export const fetchDataNews = () => {
+export const fetchDataNews = (lang) => {
     return async (dispatch) => {
         try {
-            const response = await Api.get('/')
+            const response = await Api.get('/', {
+                headers: {
+                    'Accept-Language': lang
+                }
+            })
             dispatch(setNews(response.data))
         } catch (error) {
             console.log(error);

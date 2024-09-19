@@ -36,7 +36,7 @@ function Contingent({ data }) {
                         <div className='text'>
                             <b>{items.name}</b>
                             <p>{items.grade}</p>
-                            <span>{getLocal === 'kg' ? items.description_ky : items.description_ru}</span>
+                            <span>{getLocal === 'ky' ? items.description_ky : items.description_ru}</span>
                         </div>
                     </div>
                 )) : <Loader />}

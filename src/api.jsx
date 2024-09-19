@@ -1,5 +1,5 @@
 import axios from 'axios'
 
 export const Api = axios.create({
-    baseURL: 'https://altynuya.kg/api'
+    baseURL: 'https://edu.altynuya.kg/api'
 })

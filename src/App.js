@@ -3,7 +3,6 @@ import Header from "./components/header/header";
 import HomePage from "./pages/home-page/home-page";
 import Footer from "./components/footer/footer";
 import About from "./pages/about-page/about";
-import ForParentsPage from "./pages/forParents-page/forParents-page";
 import GalleryPage from "./pages/gallery-page/gallery-page";
 import ContactsPage from "./pages/contacts-page/contacts-page";
 import NewsPage from "./pages/news-page/news-page";
@@ -23,15 +22,19 @@ import Contingent from "./pages/contingent/contingent";
 import Documents from "./pages/documents/documents";
 import { useEffect, useState } from "react";
 import { language } from "./language";
+import { useDispatch } from "react-redux";
+import { fetchDataNews } from "./redux/news/newsSlice";
 
 function App() {
 
   const location = useLocation()
-  const [languages, setLanguages] = useState(localStorage.getItem('language') || 'kg');
+  const dispatch = useDispatch()
+  const [languages, setLanguages] = useState(localStorage.getItem('language') || 'ky');
 
   const handleLanguage = () => {
-    const newLang = languages === 'kg' ? 'ru' : 'kg';
+    const newLang = languages === 'ky' ? 'ru' : 'ky';
     setLanguages(newLang);
+    dispatch(fetchDataNews(newLang));
     localStorage.setItem('language', newLang);
   };
 
@@ -58,7 +61,7 @@ function App() {
           zIndex: '1'
         }}
       >
-        <NavLink target="_blank" to='https://wa.me/+996500500500'>
+        <NavLink target="_blank" to='https://wa.me/+996223009096'>
           <IoLogoWhatsapp
             style={{
               fontSize: '70px',

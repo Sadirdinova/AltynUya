@@ -11,7 +11,6 @@ function Header({ data, handleLanguage, languages }) {
     const [isHovered, setIsHovered] = useState(null);
     const [showMenu, setShowMenu] = useState(false);
     const [chevron, setChevron] = useState(null)
-
     const handleMouseEnter = (index) => {
         setIsHovered(isHovered === index ? null : index);
     };
@@ -36,7 +35,7 @@ function Header({ data, handleLanguage, languages }) {
                 </NavLink>
             </div>
             <nav>
-                <button onClick={handleLanguage}>{languages === 'kg' ? 'KG' : 'RU'}</button>
+                <button onClick={handleLanguage}>{languages === 'ky' ? 'KG' : 'RU'}</button>
                 <ul>
                     <li><NavLink to='/'><FaHome /></NavLink></li>
                     <div onMouseEnter={() => handleMouseEnter(1)} onMouseLeave={() => handleMouseLeave(1)}>
@@ -55,7 +54,7 @@ function Header({ data, handleLanguage, languages }) {
                 </ul>
             </nav>
             <div className='menu'>
-                <button onClick={handleLanguage}>{languages === 'kg' ? 'KG' : 'RU'}</button>
+                <button onClick={handleLanguage}>{languages === 'ky' ? 'KG' : 'RU'}</button>
                 <IoMdMenu onClick={handleShowMenu} />
                 {showMenu && (
                     <>
@@ -67,36 +66,36 @@ function Header({ data, handleLanguage, languages }) {
                             <ul>
                                 <li><NavLink to='/'><FaHome /></NavLink></li>
                                 <li>
-                                    <NavLink to='#'>{data.about}</NavLink>
+                                    {data.about}
                                     <FaChevronDown onClick={() => handleChevron(1)} style={chevron === 1 ? { transform: 'rotate(180deg)' } : null} />
                                 </li>
                                 {chevron === 1 && (
                                     <div>
-                                        <NavLink to='/aboutUs'>{data.aboutUs}</NavLink>
-                                        <NavLink to='/teachingStaff'>{data.teachingStaff}</NavLink>
-                                        <NavLink to='/vacancy'>{data.vacancies}</NavLink>
-                                        <NavLink to='/volunteers'>{data.volunteers}</NavLink>
-                                        <NavLink to='/events'>{data.events}</NavLink>
-                                        <NavLink to='/qualification'>Квалификация</NavLink>
-                                        <NavLink to='/cooperation'>{data.cooperation}</NavLink>
+                                        <NavLink to='/aboutUs' onClick={handleShowMenu}>{data.aboutUs}</NavLink>
+                                        <NavLink to='/teachingStaff' onClick={handleShowMenu}>{data.teachingStaff}</NavLink>
+                                        <NavLink to='/vacancy' onClick={handleShowMenu}>{data.vacancies}</NavLink>
+                                        <NavLink to='/volunteers' onClick={handleShowMenu}>{data.volunteers}</NavLink>
+                                        <NavLink to='/events' onClick={handleShowMenu}>{data.events}</NavLink>
+                                        <NavLink to='/qualification' onClick={handleShowMenu}>Квалификация</NavLink>
+                                        <NavLink to='/cooperation' onClick={handleShowMenu}>{data.cooperation}</NavLink>
                                     </div>
                                 )}
                                 <li>
-                                    <NavLink to='#'>{data.forParents}</NavLink>
+                                    {data.forParents}
                                     <FaChevronDown onClick={() => handleChevron(2)} style={chevron === 2 ? { transform: 'rotate(180deg)' } : null} />
                                 </li>
                                 {chevron === 2 && (
                                     <div>
-                                        <NavLink to='/educationalProcess'>{data.educationalProcess}</NavLink>
-                                        <NavLink to='/additionalLessons'>{data.lessons}</NavLink>
-                                        <NavLink to='/contingent'>Контингент</NavLink>
+                                        <NavLink to='/educationalProcess' onClick={handleShowMenu}>{data.educationalProcess}</NavLink>
+                                        <NavLink to='/additionalLessons' onClick={handleShowMenu}>{data.lessons}</NavLink>
+                                        <NavLink to='/contingent' onClick={handleShowMenu}>Контингент</NavLink>
                                     </div>
                                 )}
-                                <li><NavLink to='/news'>{data.news}</NavLink></li>
-                                <li><NavLink to='/reception'>{data.reception}</NavLink></li>
-                                <li><NavLink to='/gallery'>Галерея</NavLink></li>
-                                <li><NavLink to='/accreditation'>Аккредитация</NavLink></li>
-                                <li><NavLink to='/contacts'>{data.contacts}</NavLink></li>
+                                <li><NavLink to='/news' onClick={handleShowMenu}>{data.news}</NavLink></li>
+                                <li><NavLink to='/reception' onClick={handleShowMenu}>{data.reception}</NavLink></li>
+                                <li><NavLink to='/gallery' onClick={handleShowMenu}>Галерея</NavLink></li>
+                                <li><NavLink to='/accreditation' onClick={handleShowMenu}>Аккредитация</NavLink></li>
+                                <li><NavLink to='/contacts' onClick={handleShowMenu}>{data.contacts}</NavLink></li>
                             </ul>
                         </div>
                     </>

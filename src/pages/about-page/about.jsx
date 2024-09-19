@@ -28,8 +28,8 @@ function About({ data }) {
             <hr />
             {datas ? datas.map(item => (
                 <div className='text' key={item.id}>
-                    <h4>{getLocal === 'kg' ? item.title_ky : item.title_ru}</h4>
-                    <p>{getLocal === 'kg' ? item.text_ky : item.text_ru}</p>
+                    <h4>{getLocal === 'ky' ? item.title_ky : item.title_ru}</h4>
+                    <p dangerouslySetInnerHTML={{ __html: getLocal === 'ky' ? item.text_ky : item.text_ru }}/>
                 </div>
             )) : <Loader />}
             <div className='about-mission'>

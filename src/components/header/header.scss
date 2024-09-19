@@ -116,8 +116,7 @@ header {
                 height: 100%;
                 width: 60%;
                 padding: 20px;
-                transform: translateX(-100%);
-                transition: 0.7s;
+                animation: anim 0.7s linear forwards;
 
                 @media screen and (max-width: 500px) {
                     width: 80%;
@@ -149,24 +148,25 @@ header {
                             &:hover,
                             &:active,
                             &:focus {
-                                color: #15a648;
+                                color: #3afb44;
                             }
                         }
+                    }
 
-                        a {
-                            text-decoration: none;
-                            color: #fff;
-                            font-size: 20px;
+                    a,
+                    li {
+                        text-decoration: none;
+                        color: #fff;
+                        font-size: 20px;
 
-                            @media screen and (max-width: 500px) {
-                                font-size: 18px;
-                            }
+                        @media screen and (max-width: 500px) {
+                            font-size: 18px;
+                        }
 
-                            &:hover,
-                            &:active,
-                            &:focus {
-                                color: #15a648;
-                            }
+                        &:hover,
+                        &:active,
+                        &:focus {
+                            color: #3afb44;
                         }
                     }
 
@@ -186,7 +186,7 @@ header {
                             &:hover,
                             &:active,
                             &:focus {
-                                color: #15a648;
+                                color: #3afb44;
                             }
                         }
                     }
@@ -197,10 +197,14 @@ header {
         svg {
             font-size: 30px;
         }
-        @media screen and (max-width: 1085px) {
-            .active {
-                transform: none;
-            }
-        }
+    }
+}
+
+@keyframes anim {
+    0% {
+        width: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }

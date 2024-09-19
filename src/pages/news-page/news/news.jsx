@@ -34,20 +34,20 @@ function News() {
 
   return (
     <div className='newsPage'>
-      {(data && data.title ?  
+      {(data && data.title ?
         <div>
-          <h3>{getLocal === 'kg' ? data.title_ky : data.title_ru}</h3>
+          <h3>{getLocal === 'ky' ? data.title_ky : data.title_ru}</h3>
           <hr />
           <div className='content'>
             <div>
               <img src={data.image} alt="" />
             </div>
-            <p>{getLocal === 'kg' ? data.text_ky : data.text_ru}</p>
+            <p>{getLocal === 'ky' ? data.text_ky : data.text_ru}</p>
             <hr />
             <span>{formatDate(data.created_date)}</span>
           </div>
         </div>
-        : <Loader/>
+        : <Loader />
       )}
     </div>
   )

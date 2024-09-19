@@ -22,7 +22,7 @@ function ContactsPage({ data }) {
     }
     setErrors(errors);
     e.preventDefault();
-    const contactDatas = {
+    const contactDatas = {  
       full_name: contactData.name,
       email: contactData.email,
       phone: contactData.phone,
@@ -52,8 +52,8 @@ function ContactsPage({ data }) {
             <b>Байланыш маалыматтары</b>
             <hr />
           </div>
-          <span>Адрес:<NavLink target='_blank' to='https://www.google.com/maps/place/572+улица+Фрунзе,+Новопокровка'>Бишкек шаары, Новопокровка айылы, Фрунзе көчөсү 572/1</NavLink></span>
-          <span>Тел:<NavLink to='tel:+996 500 500 500'>+996 500 500 500</NavLink></span>
+          <span>Адрес:<NavLink target='_blank' to='https://www.google.com/maps/place/572+улица+Фрунзе,+Новопокровка'>Ысык-Ата району, Новопокровка айылы, Фрунзе көчөсү 572</NavLink></span>
+          <span>Тел:<NavLink to='tel:+996 223 009 096'>+996 223 00 90 96</NavLink></span>
           <span>Почта:<NavLink to='mailto:altynuya.shk21@gmail.com'>altynuya.shk21@gmail.com</NavLink></span>
         </div>
         <div className='forma'>

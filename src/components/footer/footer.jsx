@@ -10,7 +10,7 @@ function Footer({ data }) {
                 <NavLink to='/'>© 2024. {data.logo}</NavLink>
                 <div className='footer-contacts'>
                     <NavLink target='_blank' to='https://www.google.com/maps/place/572+улица+Фрунзе,+Новопокровка'>{data.address}</NavLink>
-                    <NavLink to='tel:+996 500 500 500'>+996 500 500 500</NavLink>
+                    <NavLink to='tel:+996 223 009 096'>+996 223 00 90 96</NavLink>
                     <NavLink to='mailto:altynuya.shk21@gmail.com'>altynuya.shk21@gmail.com</NavLink>
                 </div>
                 <div className='footer-icons'>

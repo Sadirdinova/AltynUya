@@ -29,8 +29,8 @@ function EducationalProcess({ data }) {
       <hr />
       {datas ? datas.map((items) => (
         <div className='content' key={items.id}>
-          <h4>{getLocal === 'kg' ? items.title_ky : items.title_ru}</h4>
-          <p>{getLocal === 'kg' ? items.text_ky : items.text_ru}</p>
+          <h4>{getLocal === 'ky' ? items.title_ky : items.title_ru}</h4>
+          <p>{getLocal === 'ky' ? items.text_ky : items.text_ru}</p>
         </div>
       )) : <Loader />}
     </div>

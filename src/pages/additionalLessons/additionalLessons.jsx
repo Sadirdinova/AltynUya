@@ -5,6 +5,7 @@ import * as XLSX from 'xlsx';
 function AdditionalLessons({ data }) {
     const [datas, setDatas] = useState([]);
     const [xlsxData, setXlsxData] = useState([]);
+    const [excelData, setExcelData] = useState(null);
 
     const getDatas = async () => {
         try {
@@ -16,14 +17,18 @@ function AdditionalLessons({ data }) {
         }
     };
 
+    useEffect(() => {
+        getDatas();
+    }, []);
+
     const fetchDataFromServer = async () => {
-        if (datas.length > 0 && datas[0].image) { 
+        if (datas.length > 0 && datas[0].file) {
             try {
-                const response = await fetch(datas[0].image);
+                const response = await fetch(datas[0].file);
                 const buffer = await response.arrayBuffer();
                 const workbook = XLSX.read(buffer, { type: 'array' });
                 const worksheet = workbook.Sheets[workbook.SheetNames[0]];
-                const excelData = XLSX.utils.sheet_to_json(worksheet);
+                const excelData = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
                 setXlsxData(excelData);
             } catch (error) {
                 console.error('Error fetching data:', error);
@@ -32,11 +37,9 @@ function AdditionalLessons({ data }) {
     };
 
     useEffect(() => {
-        getDatas();
-    }, []);
-
-    useEffect(() => {
-        fetchDataFromServer()
+        if (datas.length > 0 && datas[0].file) {
+            fetchDataFromServer();
+        }
     }, [datas]);
     console.log(xlsxData);
 
@@ -49,14 +52,15 @@ function AdditionalLessons({ data }) {
 
             {datas.map(item => (
                 <div className='content' key={item.id}>
-                    <h4>{getLocal === 'kg' ? item.title_head_ky : item.title_head_ru}</h4>
-                    <p>{getLocal === 'kg' ? item.text_ky : item.text_ru}</p>
-                    <h4>{getLocal === 'kg' ? item.title_ky : item.title_ru}</h4>
+                    <h4>{getLocal === 'ky' ? item.title_head_ky : item.title_head_ru}</h4>
+                    <p>{getLocal === 'ky' ? item.text_ky : item.text_ru}</p>
+                    <h4>{getLocal === 'ky' ? item.title_ky : item.title_ru}</h4>
+                    <img src={item.file} alt="" />
                 </div>
             ))}
 
             {
-                xlsxData.map((row,index) => (
+                xlsxData.map((row, index) => (
                     <div key={index}>
                         {Object.values(row).map((value, index) => (
                             <span key={index}>{value}</span>

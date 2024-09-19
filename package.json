@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@cyntler/react-doc-viewer": "^1.14.1",
     "@fancyapps/fancybox": "^3.5.7",
     "@fancyapps/ui": "^5.0.36",
     "@reduxjs/toolkit": "^2.2.3",

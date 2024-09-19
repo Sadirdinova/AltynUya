@@ -34,7 +34,7 @@ function Qualification() {
                         </div>
                         <div className='text'>
                             <b>{items.teacher}</b>
-                            <p>{getLocal === 'kg' ? items.description_ky : items.description_ru}</p>
+                            <p>{getLocal === 'ky' ? items.description_ky : items.description_ru}</p>
                         </div>
                     </div>
                 )) : <Loader />}

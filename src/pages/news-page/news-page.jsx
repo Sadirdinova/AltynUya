@@ -21,7 +21,7 @@ function NewsPage({ data }) {
       <h3>{data.news}</h3>
       <hr />
       <div className='news-content'>
-        {news ? news.map(item => (
+        {news ? news && news.map(item => (
           <NewsBlock item={item} key={item.id} />
         )) : <Loader />}
       </div>

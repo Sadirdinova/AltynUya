@@ -32,25 +32,25 @@ function Vacancy({ data }) {
                 {vacancy ? vacancy.map((items, index) => (
                     <div key={index}>
                         <b onClick={() => handleOpen(index)}>
-                            {getLocal === 'kg' ? items.job_title_ky : items.job_title_ru}
+                            {getLocal === 'ky' ? items.job_title_ky : items.job_title_ru}
                             <FaChevronDown style={openItemIndex === index ? { transform: 'rotate(180deg)' } : null} />
                         </b>
                         {openItemIndex === index && (
                             <div className='accordion'>
                                 <div>
                                     <h4>Требования:</h4>
-                                    <li>{getLocal === 'kg' ? items.requirements_ky : items.requirements_ru}</li>
+                                    <li>{getLocal === 'ky' ? items.requirements_ky : items.requirements_ru}</li>
                                 </div>
                                 <div>
                                     <h4>Обязанности:</h4>
-                                    <li>{getLocal === 'kg' ? items.duty_ky : items.duty_ru}</li>
+                                    <li>{getLocal === 'ky' ? items.duty_ky : items.duty_ru}</li>
                                 </div>
                                 <div>
                                     <h4>Условия:</h4>
-                                    <li>{getLocal === 'kg' ? items.conditions_ky : items.conditions_ru}</li>
+                                    <li>{getLocal === 'ky' ? items.conditions_ky : items.conditions_ru}</li>
                                 </div>
                                 <span>Если заинтересованы, отправьте свое резюме на почту или на номер:
-                                    <NavLink target='_blank' to='https://wa.me/+996777777777'>+996 777 77 77 77</NavLink>
+                                    <NavLink target='_blank' to='https://wa.me/+996223009096'>+996 223 009 096</NavLink>
                                     <NavLink target='_blank' to='mailto:altynuya.shk21@gmail.com'>altynuya.shk21@gmail.com</NavLink>
                                 </span>
                             </div>

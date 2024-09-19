@@ -30,8 +30,8 @@ function Cooperation({ data }) {
             {datas ? datas.map(item => (
                 <div className="content" key={item.id}>
                     <div className="text">
-                        <b>{getLocal === 'kg' ? item.title_ky : item.title_ru}</b>
-                        <p>{getLocal === 'kg' ? item.text_ky : item.text_ru}</p>
+                        <b>{getLocal === 'ky' ? item.title_ky : item.title_ru}</b>
+                        <p>{getLocal === 'ky' ? item.text_ky : item.text_ru}</p>
                     </div>
                 </div>
             )) : <Loader />}

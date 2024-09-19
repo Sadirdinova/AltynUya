@@ -2,14 +2,9 @@ section {
     display: grid;
     justify-items: center;
     gap: 100px;
-    padding: 60px 0;
 
     @media screen and (max-width: 860px) {
         gap: 50px;
-    }
-
-    @media screen and (max-width: 500px) {
-        padding: 30px 0;
     }
 
     .slider-img {
@@ -271,12 +266,13 @@ section {
 
     .development {
         padding: 0 100px;
-        display: grid;
-        gap: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 60px;
         text-align: center;
 
         @media screen and (max-width: 860px) {
-            grid-template-columns: 1fr;
             gap: 20px;
             padding: 0 30px;
         }
@@ -286,29 +282,14 @@ section {
         }
 
         .items-block {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 20px;
-
-            @media screen and (max-width: 860px) {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .item-block {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-
-            @media screen and (max-width: 860px) {
-                grid-template-columns: 1fr;
-            }
+            max-width: 320px;
         }
 
         .items {
             display: grid;
             justify-items: center;
             gap: 20px;
+            width: 100%;
 
             @media screen and (max-width: 860px) {
                 gap: 10px;
@@ -364,7 +345,7 @@ section {
             text-align: center;
         }
 
-        .language-text {
+        .language-cards {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 20px;
@@ -374,16 +355,12 @@ section {
             }
         }
 
-        .language-img {
+        .language-card {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
             gap: 20px;
+            align-items: center;
 
-            @media screen and (max-width: 860px) {
-                grid-template-columns: 1fr;
-            }
-
-            div {
+            .language-img {
                 max-width: 550px;
 
                 @media screen and (max-width: 860px) {
